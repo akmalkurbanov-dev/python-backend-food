@@ -7,3 +7,5 @@ services:
     envVars:
       - key: SECRET_KEY
         value: твой_секрет
+      - key: PYTHON_VERSION
+        value: 3.11.9
