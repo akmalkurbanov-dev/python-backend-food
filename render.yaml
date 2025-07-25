@@ -2,10 +2,10 @@ services:
   - type: web
     name: django-backend
     env: python
+    pythonVersion: "3.11.9"  # ← Вот так правильно указывать версию Python!
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn food_ordering_backend.wsgi:application
     envVars:
       - key: SECRET_KEY
         value: твой_секрет
-      - key: PYTHON_VERSION
-        value: 3.11.9
+      # Убери PYTHON_VERSION из envVars!
